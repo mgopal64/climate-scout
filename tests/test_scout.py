@@ -316,20 +316,60 @@ def test_consider_walk_paginates(monkeypatch):
     from scout import consider
     seqs = []
 
-    def fake_post(url, payload, **kw):
-        assert url == "https://jobs.mcj.vc/api-boards/search-jobs"
+    def fake_post(self, payload):
+        assert self.board == "https://jobs.mcj.vc"
         assert payload["board"] == {"id": "mcj", "isParent": True}
         assert set(payload) == {"meta", "board", "query"}        # no extra keys (412 otherwise)
-        assert "climate-scout" not in kw["headers"]["User-Agent"]
         seqs.append(payload["meta"].get("sequence"))
         page = len(seqs) - 1
         return {"jobs": MCJ_JOBS if page < 2 else MCJ_JOBS[:1],
                 "meta": {"size": 30, "sequence": f"c{page + 1}"}, "total": 7}
 
-    monkeypatch.setattr(consider.http, "post_json", fake_post)
+    monkeypatch.setattr(consider.Session, "post", fake_post)
     monkeypatch.setattr(consider, "PAUSE", 0)
     assert len(consider.walk_jobs("https://jobs.mcj.vc/", "mcj")) == 7
     assert seqs == [None, "c1", "c2"]
+
+
+def test_consider_csrf_from_cookie_and_meta(monkeypatch):
+    from scout import consider
+
+    class Resp:
+        def __init__(self, text): self.text, self.status_code = text, 200
+        def raise_for_status(self): pass
+
+    sess = consider.Session("https://jobs.mcj.vc/")
+    monkeypatch.setattr(sess.s, "get", lambda url, **k: (
+        sess.s.cookies.set("csrf_token", "TOK", domain="jobs.mcj.vc"), Resp("<html></html>"))[1])
+    sess.prime()
+    assert sess.token == "TOK" and sess.headers()["X-CSRF-Token"] == "TOK"
+    assert "climate-scout" not in sess.s.headers["User-Agent"]
+
+    sess2 = consider.Session("https://jobs.mcj.vc")
+    monkeypatch.setattr(sess2.s, "get", lambda url, **k: Resp(
+        '<meta name="csrf-token" content="META123">'))
+    sess2.prime()
+    assert sess2.token == "META123"
+
+
+def test_consider_reprimes_on_412(monkeypatch):
+    from scout import consider
+    codes = [412, 200]
+    primes = []
+
+    class R:
+        def __init__(self, c): self.status_code = c
+        def raise_for_status(self):
+            if self.status_code >= 400:
+                raise consider.requests.HTTPError(str(self.status_code), response=self)
+        def json(self): return {"jobs": [], "meta": {}, "total": 0}
+
+    sess = consider.Session("https://jobs.mcj.vc")
+    sess.cookie_names = ["already-primed"]
+    monkeypatch.setattr(sess, "prime", lambda: primes.append(1))
+    monkeypatch.setattr(sess.s, "post", lambda *a, **k: R(codes.pop(0)))
+    assert sess.post({"meta": {}})["jobs"] == []
+    assert primes == [1]
 
 
 def test_consider_to_job_feeds_years_filter():

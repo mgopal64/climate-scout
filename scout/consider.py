@@ -10,10 +10,12 @@ Request shape is Consider's standard board search; check it with
 """
 from __future__ import annotations
 
+import re
 import sys
 import time
 
-from . import http
+import requests
+
 from .ats import Job
 
 API_PATH = "/api-boards/search-jobs"
@@ -41,19 +43,79 @@ def _headers(board: str) -> dict:
             "Origin": board, "Referer": board + "/jobs"}
 
 
-def fetch_page(board: str, board_id: str, sequence: str | None = None) -> dict:
-    board = board.rstrip("/")
-    body = http.post_json(board + API_PATH, _payload(board_id, sequence), headers=_headers(board))
-    if not isinstance((body or {}).get("jobs"), list):
-        raise RuntimeError(f"Consider response shape changed on {board}: keys={list(body or {})[:8]}")
-    return body
+_TOKEN_RX = [
+    re.compile(r'<meta[^>]+name=["\']csrf[-_]?token["\'][^>]+content=["\']([^"\']+)', re.I),
+    re.compile(r'"(?:csrfToken|csrf_token|csrf|xsrfToken)"\s*:\s*"([^"]+)"'),
+]
+
+
+class Session:
+    """Consider boards reject API calls without the CSRF token the page hands out
+    (HTTP 412 {"error":"INVALID_CSRF"}). Load the page like a browser, then send the
+    token back in the common header names."""
+
+    def __init__(self, board: str):
+        self.board = board.rstrip("/")
+        self.s = requests.Session()
+        self.s.headers.update({"User-Agent": BROWSER_UA, "Accept-Language": "en-US,en;q=0.9"})
+        self.token = None
+        self.cookie_names: list[str] = []
+
+    def prime(self) -> None:
+        r = self.s.get(self.board + "/jobs", timeout=20,
+                       headers={"Accept": "text/html,application/xhtml+xml"})
+        r.raise_for_status()
+        self.cookie_names = sorted(c.name for c in self.s.cookies)
+        for c in self.s.cookies:
+            if "csrf" in c.name.lower() or "xsrf" in c.name.lower():
+                self.token = c.value
+        if not self.token:
+            for rx in _TOKEN_RX:
+                m = rx.search(r.text)
+                if m:
+                    self.token = m.group(1)
+                    break
+
+    def headers(self) -> dict:
+        h = _headers(self.board)
+        if self.token:
+            h.update({"X-CSRF-Token": self.token, "X-XSRF-TOKEN": self.token,
+                      "csrf-token": self.token, "x-csrftoken": self.token})
+        return h
+
+    def post(self, payload: dict) -> dict:
+        if self.token is None and not self.cookie_names:
+            self.prime()
+        for attempt in range(3):
+            r = self.s.post(self.board + API_PATH, json=payload, headers=self.headers(), timeout=30)
+            if r.status_code == 412 and attempt == 0:      # token expired/rotated: re-prime once
+                self.prime()
+                continue
+            if r.status_code == 429 or r.status_code >= 500:
+                time.sleep(2 ** attempt)
+                continue
+            r.raise_for_status()
+            body = r.json()
+            if not isinstance((body or {}).get("jobs"), list):
+                raise RuntimeError(f"Consider response shape changed on {self.board}: "
+                                   f"keys={list(body or {})[:8]}")
+            return body
+        r.raise_for_status()
+        raise RuntimeError(f"Consider request kept failing on {self.board}")
+
+
+def fetch_page(board: str, board_id: str, sequence: str | None = None,
+               session: Session | None = None) -> dict:
+    session = session or Session(board)
+    return session.post(_payload(board_id, sequence))
 
 
 def walk_jobs(board: str, board_id: str, max_pages: int = MAX_PAGES) -> list[dict]:
     jobs: list[dict] = []
     seq = None
+    session = Session(board)
     for _ in range(max_pages):
-        body = fetch_page(board, board_id, seq)
+        body = fetch_page(board, board_id, seq, session)
         batch = body["jobs"]
         jobs.extend(batch)
         seq = (body.get("meta") or {}).get("sequence")
@@ -83,17 +145,25 @@ def to_job(item: dict) -> Job:
 
 
 def debug(board: str, board_ids: list[str]) -> None:
+    sess = Session(board)
+    try:
+        sess.prime()
+        print(f"  page cookies: {sess.cookie_names or 'none'}; "
+              f"csrf token found: {'yes' if sess.token else 'NO'}")
+    except Exception as e:  # noqa: BLE001
+        print(f"  loading {board}/jobs failed: {e}")
     for bid in board_ids:
         try:
-            body = fetch_page(board, bid)
+            body = fetch_page(board, bid, session=sess)
             titles = [f"{j.get('companyName')}: {j.get('title')}" for j in body["jobs"][:3]]
             print(f"  board_id={bid!r}: OK total={body.get('total')} e.g. {titles}")
             return
         except Exception as e:  # noqa: BLE001
             body = getattr(getattr(e, "response", None), "text", "") or ""
             print(f"  board_id={bid!r}: FAILED {e}" + (f"\n    server said: {body[:300]!r}" if body else ""))
-    print("\nNone worked. Paste me the 'server said' line above, plus the remaining Request "
-          "Headers from DevTools (origin, referer, user-agent, and any x-... headers).")
+    print("\nStill failing. In DevTools > Network > the search-jobs request > Headers, send me the"
+          " NAMES (not values) of any request header containing 'csrf' or 'xsrf', and the cookie"
+          " names under Application > Cookies > jobs.mcj.vc.")
 
 
 if __name__ == "__main__":
