@@ -4,6 +4,7 @@
   python -m scout.poll --report     rank ALL currently open matching jobs -> report.md
   python -m scout.poll --dry-run    evaluate + print, don't notify or save state
   python -m scout.poll --no-llm     rules only
+  python -m scout.poll --report --email   ...and email it (used by the cloud 'report' workflow)
 """
 from __future__ import annotations
 
@@ -14,7 +15,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 
 from . import ats, config, http, llm
-from .pipeline import evaluate, notify_batch
+from .pipeline import email_report, evaluate, notify_batch
 
 
 def fetch_all(companies: list[dict], workers: int):
@@ -50,14 +51,19 @@ def evaluate_all(jobs, cfg, profile, use_llm, workers=4):
 
 def write_report(results, path) -> None:
     passed = [(j, v) for j, v in results if v.passed]
-    passed.sort(key=lambda jv: (-(jv[1].fit if jv[1].fit is not None else 5), jv[0].company))
+    passed.sort(key=lambda jv: (-jv[1].rank, jv[0].company))
+    scored = any(v.fit is not None for _, v in passed)
     lines = [f"# climate-scout report - {datetime.now().strftime('%Y-%m-%d %H:%M')}",
-             f"{len(passed)} matching open roles (of {len(results)} evaluated)\n",
+             f"{len(passed)} matching open roles (of {len(results)} evaluated). "
+             + ("Fit = LLM score; ~N = keyword estimate where unscored."
+                if scored else "~N = free keyword-relevance estimate (run without --no-llm for LLM fit)."),
+             "",
              "| Fit | Level | Company | Title | Location | Flags / why |",
              "|---|---|---|---|---|---|"]
     for j, v in passed:
         note = "; ".join(filter(None, [v.why] + v.flags)).replace("|", "/")
-        lines.append(f"| {v.fit if v.fit is not None else '-'} | {v.level or '-'} | "
+        score = v.fit if v.fit is not None else (f"~{v.est}" if v.est is not None else "-")
+        lines.append(f"| {score} | {v.level or '-'} | "
                      f"{j.company} | [{j.title}]({j.url}) | {j.location} | {note} |")
     path.write_text("\n".join(lines) + "\n")
     print(f"\nwrote {path} ({len(passed)} matches)")
@@ -68,6 +74,7 @@ def main(argv=None) -> None:
     ap.add_argument("--report", action="store_true")
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--no-llm", action="store_true")
+    ap.add_argument("--email", action="store_true", help="with --report: email the ranked report")
     ap.add_argument("--limit", type=int, default=0, help="only poll the first N companies")
     args = ap.parse_args(argv)
 
@@ -106,11 +113,14 @@ def main(argv=None) -> None:
     results = evaluate_all(candidates, cfg, profile, use_llm)
 
     if args.report:
-        write_report(results, config.ROOT / "report.md")
+        path = config.ROOT / "report.md"
+        write_report(results, path)
+        if args.email:
+            email_report(results, contacts, cfg, path)
     else:
         passed = [(j, v) for j, v in results if v.passed]
-        passed.sort(key=lambda jv: -(jv[1].fit or 0))
-        cap = cfg["poll"].get("max_notifications_per_run", 25)
+        passed.sort(key=lambda jv: -jv[1].rank)
+        cap = cfg["poll"].get("max_notifications_per_run", 15)
         if args.dry_run:
             for j, v in passed[:cap]:
                 print(f"  [dry] {j.title} @ {j.company} fit={v.fit} {v.flags}")

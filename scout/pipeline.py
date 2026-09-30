@@ -23,6 +23,11 @@ class Verdict:
     fit: int | None = None
     level: str = ""
     why: str = ""
+    est: int | None = None        # rules-based relevance estimate (always set when rules pass)
+
+    @property
+    def rank(self) -> int:
+        return self.fit if self.fit is not None else (self.est if self.est is not None else 5)
 
 
 def evaluate(job: ats.Job, cfg: dict, profile: str, *, use_llm: bool,
@@ -40,14 +45,15 @@ def evaluate(job: ats.Job, cfg: dict, profile: str, *, use_llm: bool,
     flags += dflags
     if not ok:
         return Verdict(False, reason, flags)
+    est = filters.relevance(job.title, job.description)
     if not use_llm:
-        return Verdict(True, "rules passed", flags)
+        return Verdict(True, "rules passed", flags, est=est)
 
     s = llm.score(job, profile, cfg["llm"])
     if s is None:
-        return Verdict(True, "rules passed (LLM unavailable)", flags + ["unscored"])
+        return Verdict(True, "rules passed (LLM unavailable)", flags + ["unscored"], est=est)
     flags += [f"risk: {k}" for k in s["knockouts"]]
-    v = Verdict(True, "", flags, s["fit"], s["level"], s["reason"])
+    v = Verdict(True, "", flags, s["fit"], s["level"], s["reason"], est=est)
     if s["level"] in cfg["llm"].get("drop_levels", []):
         v.passed, v.reason = False, f"LLM level={s['level']}"
     elif s["fit"] < cfg["llm"].get("min_fit", 6):
@@ -85,7 +91,8 @@ def format_message(job: ats.Job, v: Verdict, who: list[str]) -> str:
     return "\n".join(lines)
 
 
-def build_digest(entries, overflow: int, source: str) -> tuple[str, str, str]:
+def build_digest(entries, overflow: int, source: str,
+                 overflow_note: str = "see the Actions log") -> tuple[str, str, str]:
     """(subject, plain text, html) for a list of (job, verdict, contacts)."""
     n = len(entries)
     first = entries[0][0] if entries else None
@@ -96,9 +103,9 @@ def build_digest(entries, overflow: int, source: str) -> tuple[str, str, str]:
     for j, v, who in entries:
         text.append(f"{j.title} @ {j.company}\n{format_message(j, v, who)}\n{j.url}\n")
         e = html.escape
-        meta = " &middot; ".join(filter(None, [
-            e(j.location or "location n/a"),
-            f"Fit <b>{v.fit}/10</b> ({e(v.level)}): {e(v.why)}" if v.fit is not None else ""]))
+        score = (f"Fit <b>{v.fit}/10</b> ({e(v.level)}): {e(v.why)}" if v.fit is not None
+                 else f"Relevance ~{v.est}/10 (keyword estimate)" if v.est is not None else "")
+        meta = " &middot; ".join(filter(None, [e(j.location or "location n/a"), score]))
         rows.append(
             f'<div style="margin:0 0 18px"><div style="font-size:16px"><a href="{e(j.url)}">'
             f"{e(j.title)}</a> &mdash; <b>{e(j.company)}</b></div>"
@@ -107,15 +114,15 @@ def build_digest(entries, overflow: int, source: str) -> tuple[str, str, str]:
             + (f'<div style="color:#777;font-size:13px">{e("; ".join(v.flags))}</div>' if v.flags else "")
             + "</div>")
     if overflow:
-        text.append(f"(+{overflow} more matches not listed; see the Actions log)")
-        rows.append(f"<p><i>+{overflow} more matches not listed; see the Actions log.</i></p>")
+        text.append(f"(+{overflow} more matches not listed; {overflow_note})")
+        rows.append(f"<p><i>+{overflow} more matches not listed; {html.escape(overflow_note)}.</i></p>")
     footer = f"Source: {source}. Sorted: people you know first, then fit."
     return (subject, "\n".join(text) + "\n" + footer,
             f'<div style="font-family:Arial,sans-serif">{"".join(rows)}'
             f'<p style="color:#999;font-size:12px">{html.escape(footer)}</p></div>')
 
 
-def send_email(subject: str, text: str, html_body: str, cfg: dict) -> bool:
+def send_email(subject: str, text: str, html_body: str, cfg: dict, attachments=()) -> bool:
     user, pw = os.environ.get("EMAIL_USER"), os.environ.get("EMAIL_APP_PASSWORD")
     if not (user and pw):
         print("  [notify] EMAIL_USER / EMAIL_APP_PASSWORD not set - printed only")
@@ -125,6 +132,8 @@ def send_email(subject: str, text: str, html_body: str, cfg: dict) -> bool:
     msg["To"] = os.environ.get("EMAIL_TO") or user
     msg.set_content(text)
     msg.add_alternative(html_body, subtype="html")
+    for path in attachments:
+        msg.add_attachment(path.read_bytes(), maintype="text", subtype="markdown", filename=path.name)
     ncfg = cfg.get("notify", {})
     try:
         with smtplib.SMTP_SSL(ncfg.get("smtp_host", "smtp.gmail.com"),
@@ -156,7 +165,7 @@ def notify_batch(items, contacts: dict, cfg: dict, overflow: int = 0, source: st
     if not items:
         return
     entries = [(j, v, contacts_for(j.company, contacts)) for j, v in items]
-    entries.sort(key=lambda e: (not e[2], -(e[1].fit if e[1].fit is not None else 5)))
+    entries.sort(key=lambda e: (not e[2], -e[1].rank))
     for j, v, who in entries:
         print(f"  >> {j.title} @ {j.company}\n     "
               f"{format_message(j, v, who).replace(chr(10), chr(10) + '     ')}\n     {j.url}")
@@ -166,6 +175,17 @@ def notify_batch(items, contacts: dict, cfg: dict, overflow: int = 0, source: st
     if "ntfy" in channels:
         for j, v, who in entries:
             _ntfy(j, format_message(j, v, who), bool(who) or (v.fit or 0) >= 8, cfg)
+
+
+def email_report(items, contacts: dict, cfg: dict, attachment, top: int = 40) -> bool:
+    """Email the full-report results: top N inline, complete ranked report.md attached."""
+    entries = [(j, v, contacts_for(j.company, contacts)) for j, v in items if v.passed]
+    entries.sort(key=lambda e: (not e[2], -e[1].rank))
+    _, text, html_body = build_digest(entries[:top], max(0, len(entries) - top),
+                                      "full report of all open matching roles",
+                                      overflow_note="all of them are in the attached report.md")
+    subject = f"[climate-scout] report: {len(entries)} open matching roles"
+    return send_email(subject, text, html_body, cfg, attachments=[attachment])
 
 
 if __name__ == "__main__" and "--test-email" in sys.argv:

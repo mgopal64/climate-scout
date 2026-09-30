@@ -541,3 +541,53 @@ def test_board_gone_only_on_404(monkeypatch):
     assert ats.board_gone("ashby", "gone") is True
     assert ats.board_gone("ashby", "flaky") is False
     assert ats.board_gone("ashby", "ok") is False
+
+
+# ----------------------------------------------------------------- rules-only ranking
+def test_relevance_ranks_domain_roles_first():
+    r = filters.relevance
+    assert r("Machine Learning Engineer, Grid Forecasting") > r("Software Engineer")
+    assert r("Software Engineer") > r("Mechanical Design Engineer")
+    assert r("Data Scientist, New Grad") > r("Data Scientist")
+    assert 0 <= r("x") <= 10
+
+
+def test_report_sorted_by_estimate_without_llm(tmp_path):
+    from scout.pipeline import Verdict
+    mk = lambda c, t: ats.Job("ashby", "s", c, t, t, "NYC", "u")
+    results = [(mk("Aaa Co", "Mechanical Engineer"), Verdict(True, est=filters.relevance("Mechanical Engineer"))),
+               (mk("Zzz Co", "ML Engineer, Grid"), Verdict(True, est=filters.relevance("ML Engineer, Grid")))]
+    out = tmp_path / "r.md"
+    poll.write_report(results, out)
+    body = out.read_text()
+    assert body.index("Zzz Co") < body.index("Aaa Co")          # relevance beats alphabetical
+    assert "| ~" in body
+
+
+# ----------------------------------------------------------------- cloud report email
+def test_email_report_attaches_full_report(monkeypatch, tmp_path):
+    from scout import pipeline
+    msgs = []
+
+    class FakeSMTP:
+        def __init__(self, *a, **k): pass
+        def __enter__(self): return self
+        def __exit__(self, *a): return False
+        def login(self, u, p): pass
+        def send_message(self, m): msgs.append(m)
+
+    monkeypatch.setattr(pipeline.smtplib, "SMTP_SSL", FakeSMTP)
+    monkeypatch.setenv("EMAIL_USER", "me@gmail.com")
+    monkeypatch.setenv("EMAIL_APP_PASSWORD", "x")
+    rep = tmp_path / "report.md"
+    rep.write_text("| Fit | ... |")
+    items = [(ats.Job("ashby", "s", f"Co{i}", str(i), "ML Engineer", "NYC", f"https://j/{i}"),
+              pipeline.Verdict(True, est=6)) for i in range(45)]
+    items.append((ats.Job("ashby", "s", "Dropped", "x", "Sales", "NYC", "u"), pipeline.Verdict(False)))
+    assert pipeline.email_report(items, {}, {}, rep)
+    m = msgs[0]
+    assert m["Subject"] == "[climate-scout] report: 45 open matching roles"
+    html_body = m.get_body(("html",)).get_content()
+    assert "Relevance ~6/10" in html_body and "+5 more" in html_body and "Dropped" not in html_body
+    att = [a for a in m.iter_attachments()]
+    assert att and att[0].get_filename() == "report.md"

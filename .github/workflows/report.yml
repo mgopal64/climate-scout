@@ -1,0 +1,26 @@
+name: report
+# Full ranked report of ALL currently open matching roles, emailed to you.
+# Trigger: gh workflow run report   (or Actions tab -> report -> Run workflow)
+on:
+  workflow_dispatch:
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120        # Gemini free tier is throttled to ~8 req/min
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12", cache: pip}
+      - run: pip install -r requirements.txt
+      - run: python -m scout.poll --report --email
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          EMAIL_USER: ${{ secrets.EMAIL_USER }}
+          EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+          PROFILE_TEXT: ${{ secrets.PROFILE_TEXT }}
+          CONTACTS_JSON: ${{ secrets.CONTACTS_JSON }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: {name: report, path: report.md, if-no-files-found: ignore}

@@ -139,3 +139,30 @@ def description_verdict(desc: str, cfg: dict) -> tuple[bool, str, list[str]]:
     if _PHD.search(desc):
         flags.append("PhD required")
     return True, "", flags
+
+
+# --------------------------------------------------------------------------- relevance (no LLM)
+# (pattern, weight if in title, weight if only in description)
+_REL = [
+    (re.compile(r"machine learning|\bml\b|data scien|forecast|optimi[sz]|model(l)?(ing|er)|"
+                r"simulation|quant|physics", re.I), 3, 1),
+    (re.compile(r"geospatial|remote sensing|\bgis\b|earth observation|climate|weather|hydro|"
+                r"water|\bgrid\b|power system|energy|emission|carbon|environment", re.I), 2, 1),
+    (re.compile(r"software|\bdata\b|research|platform|back.?end|full.?stack|analytics", re.I), 1, 0),
+    (re.compile(r"new grad|entry|junior|early career|associate|university|graduate", re.I), 2, 1),
+]
+_NEG = re.compile(r"hardware|mechanical|electrical|firmware|embedded|manufactur|test engineer|"
+                  r"process engineer|civil|structural|\bQA\b|quality", re.I)
+
+
+def relevance(title: str, desc: str = "") -> int:
+    """Free 0-10 estimate of fit from keywords, used to rank when there's no LLM score."""
+    score = 3
+    for rx, in_title, in_desc in _REL:
+        if rx.search(title or ""):
+            score += in_title
+        elif in_desc and rx.search(desc or ""):
+            score += in_desc
+    if _NEG.search(title or ""):
+        score -= 2
+    return max(0, min(10, score))
