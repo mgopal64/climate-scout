@@ -1,0 +1,2181 @@
+[
+ {
+  "ats": "lever",
+  "slug": "energy-by-5",
+  "name": "5",
+  "sources": [
+   "Energize Capital"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "activate",
+  "name": "Activate",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "lever",
+  "slug": "Agerpoint",
+  "name": "AGERpoint",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "aircompany",
+  "name": "Air Company",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "albedo",
+  "name": "Albedo",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Breakthrough Energy Ventures"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "alloyenterprises",
+  "name": "Alloy Enterprises",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": true
+ },
+ {
+  "ats": "lever",
+  "slug": "ammobia",
+  "name": "Ammobia",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "ampsortation",
+  "name": "AMP",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "amperon",
+  "name": "Amperon",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Energize Capital"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "workable",
+  "slug": "anthro",
+  "name": "Anthro",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "antora",
+  "name": "Antora Energy",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Breakthrough Energy Ventures"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "aperiatechnologies",
+  "name": "Aperia Technologies",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "workable",
+  "slug": "appliedcarbon",
+  "name": "Applied Carbon",
+  "sources": [
+   "Elemental Impact"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "applied",
+  "name": "Applied Intuition",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "lever",
+  "slug": "arable",
+  "name": "Arable",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "Arbor",
+  "name": "Arbor",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "arborenergy",
+  "name": "Arbor Energy",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "arcboatcompany",
+  "name": "Arc",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "arca",
+  "name": "Arca",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": true
+ },
+ {
+  "ats": "lever",
+  "slug": "arcadia",
+  "name": "Arcadia",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": true
+ },
+ {
+  "ats": "ashby",
+  "slug": "Arch",
+  "name": "Arch",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "arcturus",
+  "name": "Arcturus",
+  "sources": [
+   "Breakthrough Energy Fellows"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "lever",
+  "slug": "arraylabs.io",
+  "name": "Array Labs",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "astro-mechanica",
+  "name": "Astro Mechanica",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "aurorasolar",
+  "name": "Aurora Solar",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Energize Capital"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "avnos",
+  "name": "Avnos, Inc.",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "axle-careers",
+  "name": "Axle Energy",
+  "sources": [
+   "Energize Capital"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "axle-mobility",
+  "name": "Axle Mobility",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "base-power",
+  "name": "Base Power Company",
+  "sources": [
+   "Energy Impact Partners"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "lever",
+  "slug": "bedrockenergy",
+  "name": "Bedrock Energy",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Elemental Impact",
+   "Energy Impact Partners"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "betatechnologiesinc",
+  "name": "BETA Technologies",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "bluecurrent",
+  "name": "Blue Current",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "blumen",
+  "name": "Blumen",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "brimstone",
+  "name": "Brimstone",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Breakthrough Energy Ventures"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "cambio",
+  "name": "Cambio",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "cambium",
+  "name": "Cambium",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Elemental Impact"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "ionq",
+  "name": "Capella Space",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Breakthrough Energy Ventures"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "carbonchain",
+  "name": "CarbonChain",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "lever",
+  "slug": "cascade-climate",
+  "name": "Cascade Climate",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "charge-robotics",
+  "name": "Charge Robotics",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "lever",
+  "slug": "charmindustrial",
+  "name": "Charm Industrial",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "circ",
+  "name": "Circ",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Breakthrough Energy Ventures"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "civilgrid",
+  "name": "CivilGrid",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Energy Impact Partners"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "cleancroptech",
+  "name": "Clean Crop Technologies",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "siliconranch",
+  "name": "Clearloop",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "hum-ai",
+  "name": "Coastal Carbon",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "lever",
+  "slug": "cobaltrobotics",
+  "name": "Cobalt",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "cocoon",
+  "name": "Cocoon",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": true
+ },
+ {
+  "ats": "lever",
+  "slug": "cfsenergy",
+  "name": "Commonwealth Fusion Systems",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Breakthrough Energy Ventures"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "connectder",
+  "name": "ConnectDER",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Elemental Impact"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "copperhome",
+  "name": "Copper",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "corelight",
+  "name": "Corelight",
+  "sources": [
+   "Energy Impact Partners"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "cowboyspace",
+  "name": "Cowboy Space Corporation",
+  "sources": [
+   "Breakthrough Energy Ventures"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "Crusoe",
+  "name": "Crusoe",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "cruxclimate",
+  "name": "Crux",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "dandelion",
+  "name": "Dandelion Energy",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Breakthrough Energy Ventures"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "davidenergy",
+  "name": "David Energy",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "lever",
+  "slug": "deepsky",
+  "name": "Deep Sky",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "lever",
+  "slug": "diamondfoundry",
+  "name": "Diamond Foundry",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "lever",
+  "slug": "Dioxycle",
+  "name": "Dioxycle",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Breakthrough Energy Ventures",
+   "Breakthrough Energy Fellows"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "dragos",
+  "name": "Dragos",
+  "sources": [
+   "Energy Impact Partners"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "workable",
+  "slug": "ecocem",
+  "name": "Ecocem Ireland",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Breakthrough Energy Ventures"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "electrasteel",
+  "name": "Electra",
+  "sources": [
+   "Breakthrough Energy Ventures"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "eh2",
+  "name": "Electric Hydrogen",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Breakthrough Energy Ventures",
+   "Energy Impact Partners"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "elementalimpact",
+  "name": "Elemental Excelerator",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "eli",
+  "name": "Eli",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": true
+ },
+ {
+  "ats": "ashby",
+  "slug": "emerald-ai",
+  "name": "Emerald",
+  "sources": [
+   "Energy Impact Partners",
+   "Energize Capital"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "lever",
+  "slug": "energeticcapital",
+  "name": "Energetic Insurance",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "energyhub",
+  "name": "EnergyHub",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "enode",
+  "name": "Enode",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "equilibriumenergy",
+  "name": "Equilibrium Energy",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Breakthrough Energy Ventures"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "ethic",
+  "name": "Ethic",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": true
+ },
+ {
+  "ats": "ashby",
+  "slug": "euclid-power",
+  "name": "Euclid Power",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "fervoenergy",
+  "name": "Fervo Energy",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": true
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "finitestate",
+  "name": "Finite State",
+  "sources": [
+   "Energy Impact Partners"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "firststreet",
+  "name": "First Street Foundation",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "workable",
+  "slug": "flo-addenergie",
+  "name": "FLO",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Energy Impact Partners"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "forerunner",
+  "name": "Forerunner",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "formenergy",
+  "name": "Form Energy",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Breakthrough Energy Ventures",
+   "Energy Impact Partners"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "foundenergy",
+  "name": "Found Energy",
+  "sources": [
+   "Elemental Impact"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "fourth-power",
+  "name": "Fourth Power",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Breakthrough Energy Ventures"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "workable",
+  "slug": "fuseenergy",
+  "name": "Fuse Energy",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "lever_eu",
+  "slug": "genomines",
+  "name": "Genomines",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Elemental Impact"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "gigaton",
+  "name": "Gigaton",
+  "sources": [
+   "seeds"
+  ],
+  "guessed": true
+ },
+ {
+  "ats": "ashby",
+  "slug": "glacier",
+  "name": "Glacier",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Elemental Impact"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "graphyte",
+  "name": "Graphyte",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": true
+ },
+ {
+  "ats": "ashby",
+  "slug": "GravityClimate",
+  "name": "Gravity Climate",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "greenlitecareers",
+  "name": "GreenLite Technologies",
+  "sources": [
+   "Energize Capital"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "gridcare",
+  "name": "GridCARE",
+  "sources": [
+   "seeds"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "lever",
+  "slug": "gridware",
+  "name": "Gridware",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "grover",
+  "name": "Grover",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "guidewheel",
+  "name": "Guidewheel",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Breakthrough Energy Ventures"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "halter",
+  "name": "Halter",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "heartaerospace",
+  "name": "Heart Aerospace",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Breakthrough Energy Ventures"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "lever",
+  "slug": "heaten-germany-gmbh",
+  "name": "Heaten",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "heirloomcarbon",
+  "name": "Heirloom",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Breakthrough Energy Ventures"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "jetsonhome",
+  "name": "Helio Home",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "heron-power",
+  "name": "Heron Power",
+  "sources": [
+   "Breakthrough Energy Ventures",
+   "Energy Impact Partners"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "lever",
+  "slug": "hgen",
+  "name": "Hgen",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Breakthrough Energy Fellows"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "hived",
+  "name": "HIVED",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Elemental Impact"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "hopskipdrive",
+  "name": "HopSkipDrive",
+  "sources": [
+   "Energy Impact Partners"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "lever",
+  "slug": "goswift",
+  "name": "Hopthru",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Elemental Impact"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "lever",
+  "slug": "HowGood",
+  "name": "HowGood",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "infinitumelectric",
+  "name": "Infinitum",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "lever",
+  "slug": "InsightM",
+  "name": "Insight M",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "workable",
+  "slug": "vectoratomic",
+  "name": "IonQ",
+  "sources": [
+   "Breakthrough Energy Ventures"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "isometric",
+  "name": "Isometric",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "workable",
+  "slug": "itselectric",
+  "name": "it's electric",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "klim",
+  "name": "Klim",
+  "sources": [
+   "Elemental Impact"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "zambold",
+  "name": "KoBold Metals",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Breakthrough Energy Ventures"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "koboldmetals",
+  "name": "KoBold Metals",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Breakthrough Energy Ventures"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "leveltenenergy",
+  "name": "LevelTen Energy",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "lever",
+  "slug": "lightship",
+  "name": "Lightship",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "Lime",
+  "name": "Lime",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "limelight-steel",
+  "name": "Limelight Steel",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "lever",
+  "slug": "livingcarbon",
+  "name": "Living Carbon",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": true
+ },
+ {
+  "ats": "ashby",
+  "slug": "lumen.energy",
+  "name": "Lumen Energy",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "lydian",
+  "name": "Lydian",
+  "sources": [
+   "Breakthrough Energy Ventures"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "m2xenergyinc",
+  "name": "M2X Energy",
+  "sources": [
+   "Breakthrough Energy Ventures"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "lever",
+  "slug": "MachinaLabs",
+  "name": "Machina Labs",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "workable",
+  "slug": "mad-capital",
+  "name": "Mad capital",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "smartrecruiters",
+  "slug": "MaglevAeroInc",
+  "name": "Maglev Aero",
+  "sources": [
+   "Breakthrough Energy Ventures"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "magrathea",
+  "name": "Magrathea",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "marble",
+  "name": "Marble",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "marianaminerals",
+  "name": "Mariana Minerals",
+  "sources": [
+   "Breakthrough Energy Ventures"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "lever",
+  "slug": "MastReforestation",
+  "name": "Mast Reforestation",
+  "sources": [
+   "Elemental Impact"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "MaticRobots",
+  "name": "Matician",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "convey",
+  "name": "MessageBroadcast",
+  "sources": [
+   "Energy Impact Partners"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "metoxinternationalinc",
+  "name": "Metox International",
+  "sources": [
+   "Elemental Impact"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "Mill",
+  "name": "Mill",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Breakthrough Energy Ventures",
+   "Energy Impact Partners"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "lever",
+  "slug": "minesense",
+  "name": "MineSense Technologies",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "Molg",
+  "name": "MOLG",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Elemental Impact"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "lever",
+  "slug": "moltenindustries",
+  "name": "Molten Industries",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Breakthrough Energy Ventures",
+   "Breakthrough Energy Fellows"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "momentenergy",
+  "name": "Moment Energy",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "muonspace",
+  "name": "Muon Space",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "navierboat",
+  "name": "Navier",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "nearspacelabs",
+  "name": "Near Space Labs",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "neara",
+  "name": "Neara",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "workable",
+  "slug": "neutreeno-1",
+  "name": "Neutreeno",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "niraenergy",
+  "name": "Nira Energy",
+  "sources": [
+   "Energize Capital"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "nitricity",
+  "name": "Nitricity",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Elemental Impact",
+   "Energy Impact Partners"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "workable",
+  "slug": "renewhome",
+  "name": "Ohmconnect",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Elemental Impact"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "oklo",
+  "name": "Oklo",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "lever",
+  "slug": "omnidian",
+  "name": "Omnidian",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "ostrom",
+  "name": "Ostrom",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "overstory",
+  "name": "Overstory",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Energy Impact Partners"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "overviewenergy",
+  "name": "Overview Energy",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "carbondirect",
+  "name": "Pachama",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "pacificfusion",
+  "name": "Pacific Fusion",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Breakthrough Energy Ventures"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "palmettocleantech",
+  "name": "Palmetto",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "pano-ai",
+  "name": "Pano",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "panthalassa",
+  "name": "Panthalassa",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "parallel",
+  "name": "Parallel Systems",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "workable",
+  "slug": "grassrootscarbon",
+  "name": "PastureMap",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Elemental Impact"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "patch.io",
+  "name": "Patch",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Energize Capital"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "permitflow",
+  "name": "PermitFlow",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "persefoniaiinc",
+  "name": "Persefoni",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "phasebiolabs",
+  "name": "Phase Biolabs",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Breakthrough Energy Fellows"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "lever",
+  "slug": "PhoenixTailings",
+  "name": "Phoenix Tailings",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "psi",
+  "name": "Physical Superintelligence",
+  "sources": [
+   "Breakthrough Energy Ventures"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "vanishid",
+  "name": "Picnic Corporation",
+  "sources": [
+   "Energy Impact Partners"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "pivotbio",
+  "name": "Pivot Bio",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Breakthrough Energy Ventures"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "planetlabs",
+  "name": "Planet",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "workable",
+  "slug": "j",
+  "name": "Power Factors",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Energy Impact Partners"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "powerline",
+  "name": "Powerline",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "powerx",
+  "name": "PowerX",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": true
+ },
+ {
+  "ats": "lever",
+  "slug": "prolific-machines",
+  "name": "Prolific Machines",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Breakthrough Energy Ventures"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "Pulsora Inc",
+  "name": "Pulsora",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "lever",
+  "slug": "pyka",
+  "name": "Pyka",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "quaise",
+  "name": "Quaise Energy",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "quilt",
+  "name": "Quilt",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Energy Impact Partners"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "radiant-industries",
+  "name": "Radiant",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "lever",
+  "slug": "make-rain",
+  "name": "Rainmaker",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "rapidsos",
+  "name": "RapidSOS",
+  "sources": [
+   "Energy Impact Partners"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "lever",
+  "slug": "reachpower",
+  "name": "Reach",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "tempo",
+  "name": "Redoxblox",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "redwoodmaterials",
+  "name": "Redwood Materials",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Breakthrough Energy Ventures"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "relativity",
+  "name": "Relativity Space",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "reliable-robotics",
+  "name": "Reliable Robotics",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "remoracarbon",
+  "name": "Remora",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "river",
+  "name": "River",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": true
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "rondoenergy",
+  "name": "Rondo Energy",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Breakthrough Energy Ventures",
+   "Energy Impact Partners"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "runwise",
+  "name": "Runwise",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "workable",
+  "slug": "sense",
+  "name": "Sense",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Energy Impact Partners"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "sewer-ai",
+  "name": "SewerAI",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "workable",
+  "slug": "resource-innovations",
+  "name": "Shifted Energy",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Elemental Impact"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "silananotechnologies",
+  "name": "Sila Nanotechnologies",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "sirenopt",
+  "name": "SirenOpt",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": true
+ },
+ {
+  "ats": "lever",
+  "slug": "sitetracker",
+  "name": "Sitetracker",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Energy Impact Partners",
+   "Energize Capital"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "workable",
+  "slug": "skyven-technologies",
+  "name": "Skyven Technologies",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "smartrent",
+  "name": "SmartRent",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "sofarocean",
+  "name": "Sofar Ocean",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "solcoa",
+  "name": "Solcoa Technologies",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "span",
+  "name": "SPAN",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Elemental Impact"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "sparkfund",
+  "name": "Sparkfund",
+  "sources": [
+   "Energy Impact Partners"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "StandInsurance",
+  "name": "Stand",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "stillbright",
+  "name": "Still Bright",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": true
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "stokespacetechnologies",
+  "name": "STOKE Space Technologies",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Breakthrough Energy Ventures"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "sustainment",
+  "name": "Sustainment",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "sweep",
+  "name": "Sweep",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": true
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "swiftsolar",
+  "name": "Swift Solar",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "sygaldry-technologies",
+  "name": "Sygaldry Technologies",
+  "sources": [
+   "Breakthrough Energy Ventures"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "sylvera",
+  "name": "Sylvera",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "tandempv",
+  "name": "Tandem PV",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "workable",
+  "slug": "terabase-energy",
+  "name": "Terabase Energy",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Breakthrough Energy Ventures"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "lever",
+  "slug": "Terraformation",
+  "name": "Terraformation",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "lever",
+  "slug": "SoloAVT",
+  "name": "Terraline",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "tetra",
+  "name": "Tetra",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "lever",
+  "slug": "thalolabs",
+  "name": "Thalo Labs",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "lever",
+  "slug": "thea.energy",
+  "name": "Thea Energy",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "twelve",
+  "name": "Twelve",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Elemental Impact"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "tyba",
+  "name": "Tyba",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Energize Capital"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "vatnsystems",
+  "name": "Vatn Systems",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": true
+ },
+ {
+  "ats": "ashby",
+  "slug": "vector",
+  "name": "Vector",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "veir",
+  "name": "VEIR",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Breakthrough Energy Ventures"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "lever",
+  "slug": "verdigris",
+  "name": "Verdigris Technologies",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "verse",
+  "name": "Verse Inc.",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "vesta",
+  "name": "Vesta",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": true
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "via",
+  "name": "Via",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Elemental Impact"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "via99",
+  "name": "VIA",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Elemental Impact"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "Vibrant Planet",
+  "name": "Vibrant Planet",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Elemental Impact"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "lever",
+  "slug": "joltcharge",
+  "name": "Volta Charging",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "lever",
+  "slug": "voltus",
+  "name": "Voltus",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "vulcanelements",
+  "name": "VULCAN ELEMENTS",
+  "sources": [
+   "Breakthrough Energy Ventures"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "Watershed",
+  "name": "Watershed",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "watershed",
+  "name": "Watershed",
+  "sources": [
+   "seeds"
+  ],
+  "guessed": true
+ },
+ {
+  "ats": "ashby",
+  "slug": "weave-grid",
+  "name": "Weave Grid",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Breakthrough Energy Ventures",
+   "Elemental Impact"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
+  "slug": "worldly",
+  "name": "Worldly",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "wundercapital",
+  "name": "Wunder",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "lever",
+  "slug": "xcimer",
+  "name": "Xcimer Energy",
+  "sources": [
+   "Breakthrough Energy Ventures"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "xosinc",
+  "name": "Xos Trucks",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Elemental Impact"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "lever",
+  "slug": "yardstick",
+  "name": "Yard Stick PBC",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Elemental Impact"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "lever",
+  "slug": "Zanskar",
+  "name": "Zanskar",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "lever",
+  "slug": "zerohomes",
+  "name": "Zero Homes",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ }
+]

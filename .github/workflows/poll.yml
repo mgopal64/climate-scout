@@ -1,0 +1,34 @@
+name: poll
+on:
+  schedule:
+    - cron: "*/10 * * * *"     # private repo? use "*/30 * * * *" to stay under 2,000 free min/month
+  workflow_dispatch:
+concurrency:
+  group: scout-state           # shared with discover.yml so state commits never race
+  cancel-in-progress: false
+permissions:
+  contents: write
+jobs:
+  poll:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12", cache: pip}
+      - run: pip install -r requirements.txt
+      - run: python -m scout.poll
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          EMAIL_USER: ${{ secrets.EMAIL_USER }}
+          EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+          PROFILE_TEXT: ${{ secrets.PROFILE_TEXT }}
+          CONTACTS_JSON: ${{ secrets.CONTACTS_JSON }}
+      - name: commit state
+        run: |
+          git config user.name "climate-scout"
+          git config user.email "actions@users.noreply.github.com"
+          git add state/
+          git diff --cached --quiet || (git commit -m "state: poll" && git pull --rebase && git push)

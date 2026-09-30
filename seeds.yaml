@@ -1,0 +1,13 @@
+# Your own targets. Name-only entries get their ATS guessed.
+# If a guess is wrong or missing, add ats + slug explicitly, e.g.
+#   - {name: Example Co, ats: greenhouse, slug: exampleco}
+companies:
+  - {name: Watershed}
+  - {name: Paces}
+  - {name: Brightband}
+  - {name: Kayrros}
+  - {name: GridCARE, ats: ashby, slug: gridcare}
+  - {name: Salient Predictions}
+  - {name: Gigaton}
+  - {name: Logical Buildings}
+  - {name: Arboresque}

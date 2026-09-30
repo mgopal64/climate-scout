@@ -1,0 +1,9 @@
+profile.md
+contacts.json
+report.md
+__pycache__/
+.venv/
+.pytest_cache/
+secrets.sh
+secrets.sh
+.vscode/

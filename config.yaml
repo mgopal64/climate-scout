@@ -1,0 +1,115 @@
+# ---------------------------------------------------------------- sources
+# Getro-hosted climate boards (all verified live, Sep 2026). Network ids resolve
+# automatically; add `network_id: 123` to pin one if resolution ever breaks.
+getro_boards:
+  - {name: Climate Draft (Lowercarbon + dozens of climate VCs), url: https://jobs.climatedraft.org}
+  # - {name: MCJ, url: https://jobs.mcj.vc}
+  - {name: Breakthrough Energy Ventures, url: https://bevjobs.breakthroughenergy.org}
+  - {name: Breakthrough Energy Fellows, url: https://befjobs.breakthroughenergy.org}
+  - {name: Elemental Impact, url: https://jobs.elementalimpact.com}
+  - {name: Energy Impact Partners, url: https://jobs.energyimpactpartners.com}
+  - {name: Energize Capital, url: https://jobs.energizecap.com}
+
+# Any page listing companies: every ATS link on it is picked up.
+page_sources:
+  - name: ClimateTechList
+    urls:
+      - https://www.climatetechlist.com/
+      - https://www.climatetechlist.com/university
+      - https://www.climatetechlist.com/search/vertical/CleanEnergy
+      - https://www.climatetechlist.com/search/vertical/Transportation
+      - https://www.climatetechlist.com/search/vertical/AgricultureFood
+      - https://www.climatetechlist.com/search/vertical/EfficiencyReduction
+      - https://www.climatetechlist.com/search/vertical/NatureRestoration
+      - https://www.climatetechlist.com/search/vertical/BuiltEnvironment
+      - https://www.climatetechlist.com/search/vertical/Financing
+      - https://www.climatetechlist.com/search/vertical/Industrials
+      - https://www.climatetechlist.com/search/vertical/CarbonAccounting
+      - https://www.climatetechlist.com/search/vertical/CarbonRemoval
+
+discovery:
+  guess_workers: 8
+
+# ---------------------------------------------------------------- filters
+filters:
+  exclude_internships: true
+  allow_uk: true               # set false to drop London/UK roles
+  extra_allow_locations: []    # e.g. ["Toronto"]
+  max_years_drop: 3            # drop if posting requires >= this many years
+  max_years_flag: 2            # flag (don't drop) at this many
+  title_include:
+    - engineer
+    - developer
+    - scientist
+    - machine learning
+    - '\bml\b'
+    - '\bai\b'
+    - '\bdata\b'
+    - research
+    - software
+    - geospatial
+    - '\bgis\b'
+    - remote sensing
+    - model(l)?(ing|er)
+    - optimi[sz]ation
+    - '\bquant'
+    - forecast
+    - simulation
+    - climate
+    - '\bgrid\b'
+    - power systems
+    - full.?stack
+    - back.?end
+    - platform
+    - analyst
+  title_exclude:
+    - senior
+    - '\bsr\.?\b'
+    - staff
+    - principal
+    - '\blead\b'
+    - manager
+    - director
+    - head of
+    - '\bvp\b'
+    - vice president
+    - chief
+    - '\bIII\b'
+    - '\bIV\b'
+    - architect
+    - postdoc
+    - sales
+    - account executive
+    - recruit
+    - marketing
+    - technician
+    - electrician
+    - mechanic
+    - driver
+    - field service
+    - construction
+    - counsel
+    - business development
+    - customer success
+    - installer
+    - operator
+
+# ---------------------------------------------------------------- LLM
+llm:
+  enabled: true
+  provider: gemini
+  model: gemini-flash-latest
+  rpm: 8
+  min_fit: 6
+  drop_levels: [senior, mid]
+
+# ---------------------------------------------------------------- run
+poll:
+  workers: 8
+  max_notifications_per_run: 15
+
+notify:
+  channels: [email]
+  smtp_host: smtp.gmail.com
+  smtp_port: 465
+  ntfy_server: https://ntfy.sh
