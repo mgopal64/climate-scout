@@ -1,4 +1,4 @@
-# Discovery report - 2026-09-30 01:33 UTC
+# Discovery report - 2026-09-30 01:42 UTC
 **233 pollable companies** (greenhouse: 87, ashby: 84, lever: 45, workable: 15, lever_eu: 1, smartrecruiters: 1)
 
 ## Getro boards
