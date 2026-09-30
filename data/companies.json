@@ -1452,15 +1452,6 @@
   "guessed": false
  },
  {
-  "ats": "greenhouse",
-  "slug": "persefoniaiinc",
-  "name": "Persefoni",
-  "sources": [
-   "Climate Draft (Lowercarbon + dozens of climate VCs)"
-  ],
-  "guessed": false
- },
- {
   "ats": "ashby",
   "slug": "phasebiolabs",
   "name": "Phase Biolabs",
