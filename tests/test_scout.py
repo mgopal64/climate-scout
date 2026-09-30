@@ -22,6 +22,7 @@ FCFG = config.load()["filters"]
     ("https://apply.workable.com/gigaton/j/ABC/", ("workable", "gigaton")),
     ("https://jobs.smartrecruiters.com/Siemens/7440", ("smartrecruiters", "Siemens")),
     ("https://ecolab.wd1.myworkdayjobs.com/en-US/Ecolab_External/job/1", ("workday", "ecolab|Ecolab_External")),
+    ("https://apply.workable.com/j/ABC123", None),
     ("https://example.com/careers", None),
     ("", None),
 ])
@@ -273,6 +274,7 @@ def test_discover_end_to_end(monkeypatch, tmp_path):
                         lambda urls: ([("greenhouse", "watershed"), ("workday", "x|y")], []))
     monkeypatch.setattr(ats, "probe_greenhouse", lambda s: "Form Energy" if s == "formenergy" else None)
     monkeypatch.setattr(ats, "has_jobs", lambda a, s: a == "ashby" and s == "brightband")
+    monkeypatch.setattr(ats, "board_gone", lambda a, s: False)
     sent = []
     monkeypatch.setattr(discover, "notify_batch", lambda items, c, cfg, **k: sent.extend(j for j, v in items))
 
@@ -351,6 +353,7 @@ def test_discover_consider_board_and_late_baseline(monkeypatch, tmp_path):
     monkeypatch.setattr(config, "load_seeds", lambda: [])
     monkeypatch.setattr(ats, "probe_greenhouse", lambda s: None)
     monkeypatch.setattr(ats, "has_jobs", lambda a, s: False)
+    monkeypatch.setattr(ats, "board_gone", lambda a, s: False)
     mcj = list(MCJ_JOBS)
     monkeypatch.setattr(consider, "walk_jobs", lambda url, bid: list(mcj))
     sent = []
@@ -464,3 +467,37 @@ def test_email_skipped_without_creds(monkeypatch, capsys):
     monkeypatch.delenv("EMAIL_APP_PASSWORD", raising=False)
     assert pipeline.send_email("s", "t", "<p>h</p>", {}) is False
     pipeline.notify_batch([], {}, {})                                 # empty run sends nothing
+
+
+# ----------------------------------------------------------------- robustness fixes
+def test_llm_retries_transient_503(monkeypatch):
+    seq = [503, 200]
+
+    class R:
+        def __init__(self, code): self.status_code = code
+        def raise_for_status(self):
+            if self.status_code >= 400:
+                raise llm.requests.HTTPError(str(self.status_code), response=self)
+        def json(self):
+            return {"candidates": [{"content": {"parts": [
+                {"text": '{"fit": 7, "level": "early", "knockouts": [], "reason": "ok"}'}]}}]}
+
+    monkeypatch.setattr(llm.requests, "post", lambda *a, **k: R(seq.pop(0)))
+    monkeypatch.setattr(llm, "RETRY_SLEEP", 0)
+    monkeypatch.setenv("GEMINI_API_KEY", "k")
+    monkeypatch.setitem(llm._state, "fails", 0)
+    j = ats.Job("ashby", "g", "GridCARE", "1", "Physical Systems Modeling Engineer", "CA", "u")
+    assert llm.score(j, "p", {"provider": "gemini", "rpm": 0})["fit"] == 7
+
+
+def test_board_gone_only_on_404(monkeypatch):
+    def fake(ats_, slug, company):
+        if slug == "gone":
+            raise ats.http.NotFound("x")
+        if slug == "flaky":
+            raise RuntimeError("timeout")
+        return []
+    monkeypatch.setattr(ats, "fetch_jobs", fake)
+    assert ats.board_gone("ashby", "gone") is True
+    assert ats.board_gone("ashby", "flaky") is False
+    assert ats.board_gone("ashby", "ok") is False

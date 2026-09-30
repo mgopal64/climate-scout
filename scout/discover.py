@@ -106,9 +106,16 @@ def main(argv=None) -> None:
     board_items: list[tuple[str, str, ats.Job]] = []   # (board, raw ATS url, job)
     board_stats: list[str] = []
 
-    for c in config.load_companies():                       # keep what we already know
+    dead = []
+    for c in config.load_companies():                       # keep what we already know...
+        if c["ats"] in ats.POLLABLE and (c["slug"].lower() in ats._BLOCKED
+                                         or ats.board_gone(c["ats"], c["slug"])):
+            dead.append(f"{c['name']} ({c['ats']}/{c['slug']})")   # ...unless its board is gone
+            continue
         for s in c.get("sources") or ["previous run"]:
             reg.add(c["ats"], c["slug"], c["name"], s, c.get("guessed", False))
+    if dead:
+        print(f"[cleanup] dropped {len(dead)} dead boards: {', '.join(dead[:10])}")
 
     # 1. Getro boards
     for b in cfg.get("getro_boards", []):
@@ -242,7 +249,7 @@ def main(argv=None) -> None:
                 v.flags.append("via daily board sweep")
                 passed.append((j, v))
         passed.sort(key=lambda jv: -(jv[1].fit or 0))
-        cap = cfg.get("poll", {}).get("max_notifications_per_run", 25)
+        cap = cfg.get("poll", {}).get("max_notifications_per_run", 15)
         notify_batch(passed[:cap], contacts, cfg, overflow=max(0, len(passed) - cap),
                      source="daily board sweep")
         n_catch_alerts = min(len(passed), cap)
@@ -265,6 +272,7 @@ def main(argv=None) -> None:
         *[f"- {g}" for g in sorted(guessed)], "",
         f"## No ATS found ({len(still)}) - add to seeds.yaml with ats/slug if you care",
         ", ".join(still), "",
+        f"## Dropped dead boards ({len(dead)})", *[f"- {d}" for d in dead], "",
         f"## Errors ({len(errors)})", *[f"- {e}" for e in errors],
     ]
     if not args.dry_run:

@@ -50,6 +50,7 @@ knockouts: things likely to trigger an automatic rejection for this candidate, e
 _lock = threading.Lock()
 _state = {"next": 0.0, "fails": 0}
 MAX_429 = 3
+RETRY_SLEEP = 3
 
 
 def provider(cfg: dict) -> tuple[str, str | None]:
@@ -126,9 +127,19 @@ def score(job, profile: str, cfg: dict) -> dict | None:
             f"JOB POSTING\nCompany: {job.company}\nTitle: {job.title}\n"
             f"Location: {job.location or 'n/a'}\n"
             f"Description:\n{(job.description or '(not available)')[:7000]}")
-    _throttle(cfg.get("rpm"))
+    call = _gemini if p == "gemini" else _anthropic
     try:
-        text = _gemini(key, model, user) if p == "gemini" else _anthropic(key, model, user)
+        for attempt in range(3):                       # retry transient 5xx (e.g. Gemini 503)
+            _throttle(cfg.get("rpm"))
+            try:
+                text = call(key, model, user)
+                break
+            except requests.HTTPError as e:
+                code = e.response.status_code if e.response is not None else 0
+                if code >= 500 and attempt < 2:
+                    time.sleep(RETRY_SLEEP * (attempt + 1))
+                    continue
+                raise
         _state["fails"] = 0
         return parse_score(text)
     except requests.HTTPError as e:

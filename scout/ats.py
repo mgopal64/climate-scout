@@ -49,7 +49,7 @@ class Job:
 # --------------------------------------------------------------------------- detection
 
 _BLOCKED = {"embed", "v1", "api", "jobs", "job_board", "js", "posting-api",
-            "static", "assets", "careers", "search", "images"}
+            "static", "assets", "careers", "search", "images", "j"}
 
 _PATTERNS = [
     ("greenhouse", re.compile(r"greenhouse\.io/embed/job_board(?:/js)?\?for=([A-Za-z0-9_-]+)")),
@@ -262,5 +262,16 @@ def probe_greenhouse(slug: str) -> str | None:
 def has_jobs(ats: str, slug: str) -> bool:
     try:
         return bool(fetch_jobs(ats, slug, slug))
+    except Exception:  # noqa: BLE001
+        return False
+
+
+def board_gone(ats: str, slug: str) -> bool:
+    """True only if the board definitively 404s. Timeouts/5xx never count as gone."""
+    try:
+        fetch_jobs(ats, slug, slug)
+        return False
+    except http.NotFound:
+        return True
     except Exception:  # noqa: BLE001
         return False

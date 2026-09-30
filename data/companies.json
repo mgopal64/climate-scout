@@ -1517,16 +1517,6 @@
   "guessed": false
  },
  {
-  "ats": "workable",
-  "slug": "j",
-  "name": "Power Factors",
-  "sources": [
-   "Climate Draft (Lowercarbon + dozens of climate VCs)",
-   "Energy Impact Partners"
-  ],
-  "guessed": false
- },
- {
   "ats": "ashby",
   "slug": "powerline",
   "name": "Powerline",
