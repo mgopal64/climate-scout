@@ -31,6 +31,7 @@ jobs:
           EMAIL_TO: ${{ secrets.EMAIL_TO }}
           PROFILE_TEXT: ${{ secrets.PROFILE_TEXT }}
           CONTACTS_JSON: ${{ secrets.CONTACTS_JSON }}
+          FORCE_EMAIL: ${{ inputs.force_email && '1' || '0' }}
       - name: commit state
         run: |
           git config user.name "climate-scout"
