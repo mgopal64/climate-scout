@@ -3,6 +3,11 @@ on:
   schedule:
     - cron: "*/10 * * * *"     # private repo? use "*/30 * * * *" to stay under 2,000 free min/month
   workflow_dispatch:
+    inputs:
+      force_email:
+        description: "Send a test email even if nothing matches"
+        type: boolean
+        default: false
 concurrency:
   group: scout-state           # shared with discover.yml so state commits never race
   cancel-in-progress: false
