@@ -1257,15 +1257,6 @@
  },
  {
   "ats": "greenhouse",
-  "slug": "navierboat",
-  "name": "Navier",
-  "sources": [
-   "Climate Draft (Lowercarbon + dozens of climate VCs)"
-  ],
-  "guessed": false
- },
- {
-  "ats": "greenhouse",
   "slug": "nearspacelabs",
   "name": "Near Space Labs",
   "sources": [
