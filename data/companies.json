@@ -342,6 +342,15 @@
   "guessed": false
  },
  {
+  "ats": "workable",
+  "slug": "carbon180",
+  "name": "Carbon180",
+  "sources": [
+   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+  ],
+  "guessed": false
+ },
+ {
   "ats": "greenhouse",
   "slug": "carbonchain",
   "name": "CarbonChain",
