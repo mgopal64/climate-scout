@@ -1509,6 +1509,15 @@
  },
  {
   "ats": "ashby",
+  "slug": "planted",
+  "name": "Planted Solar",
+  "sources": [
+   "Breakthrough Energy Ventures"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
   "slug": "powerline",
   "name": "Powerline",
   "sources": [
