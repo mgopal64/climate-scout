@@ -865,6 +865,15 @@
   "guessed": false
  },
  {
+  "ats": "greenhouse",
+  "slug": "halcyon",
+  "name": "Halcyon",
+  "sources": [
+   "Energize Capital"
+  ],
+  "guessed": true
+ },
+ {
   "ats": "ashby",
   "slug": "halter",
   "name": "Halter",
@@ -1056,15 +1065,6 @@
   "ats": "lever",
   "slug": "lightship",
   "name": "Lightship",
-  "sources": [
-   "Climate Draft (Lowercarbon + dozens of climate VCs)"
-  ],
-  "guessed": false
- },
- {
-  "ats": "ashby",
-  "slug": "Lime",
-  "name": "Lime",
   "sources": [
    "Climate Draft (Lowercarbon + dozens of climate VCs)"
   ],
@@ -1308,6 +1308,15 @@
    "Climate Draft (Lowercarbon + dozens of climate VCs)",
    "Elemental Impact",
    "Energy Impact Partners"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "noonenergy",
+  "name": "Noon Energy",
+  "sources": [
+   "Elemental Impact"
   ],
   "guessed": false
  },
