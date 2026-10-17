@@ -1335,7 +1335,7 @@
 },
 "rubicon": {
 "result": null,
-"checked": "2026-10-02T16:23:52.373157+00:00"
+"checked": "2026-10-17T13:48:17.763138+00:00"
 },
 "standardpotential": {
 "result": null,
@@ -1355,5 +1355,9 @@
 "capture6": {
 "result": null,
 "checked": "2026-10-14T15:14:27.143363+00:00"
+},
+"esgbook": {
+"result": null,
+"checked": "2026-10-17T13:48:17.763138+00:00"
 }
 }
