@@ -1,14 +1,14 @@
-# Discovery report - 2026-10-19 17:01 UTC
+# Discovery report - 2026-10-20 15:11 UTC
 **233 pollable companies** (greenhouse: 86, ashby: 84, lever: 45, workable: 16, lever_eu: 1, smartrecruiters: 1)
 
 ## Getro boards
 | Board | Network | Jobs | Companies |
 |---|---|---|---|
-| Breakthrough Energy Ventures | 1533 | 1632 | 72 |
-| Breakthrough Energy Fellows | 2567 | 104 | 30 |
-| Elemental Impact | 624 | 1366 | 68 |
-| Energy Impact Partners | 253 | 1369 | 70 |
-| Energize Capital | 1212 | 165 | 22 |
+| Breakthrough Energy Ventures | 1533 | 1624 | 71 |
+| Breakthrough Energy Fellows | 2567 | 103 | 29 |
+| Elemental Impact | 624 | 1350 | 67 |
+| Energy Impact Partners | 253 | 1367 | 70 |
+| Energize Capital | 1212 | 151 | 21 |
 
 ## Companies contributed per source
 - Breakthrough Energy Fellows: 5
@@ -24,8 +24,8 @@
 
 ## Guessed slugs - sanity check these (0)
 
-## No ATS found (154) - add to seeds.yaml with ats/slug if you care
-Advanced Agriscience, Aeroseal, Airloom Energy, Allume Energy, Ampaire, Anning Corporation, Arboresque, Arculus Solutions, ArkeaBio, Artyc, Assetcool, AtmosZero, Atomic Canyon, Atomic Data, Ayr Energy, Bidgely, Blue Frontier, Blue Planet Energy Systems, LLC, Blue World Technologies, Blyncsy, Boston Metal, Brightband, BurnBot, CERT Systems, Capture6, CarbonCure Technologies, CeresAI, ChargerHelp!, Chargetrip, Chement, CreCTech, Cyclic Materials, Dimensional Energy, Dragonfly Energy Corporation, ERock, Elum Energy, Enchanted Rock, Energy Dome, Ev.energy, Fast Radius, Felt, Forum Mobility, Full Harvest, Geli, Gencores, Geologicai, Greenly, Grid Status, GridBeyond, GridX, H2Pro, H2site, Handle, Hawaii'i 'Ulu Cooperative, HeatTransformers, Hephae Energy Technology, Hertha Metals, Holocene, Hometree, HyperHeat, Infravision, Innowatts, Instagrid, Ion Solar, Jupiter Intelligence, Kayrros, Kelvin, Kevala, Kodama Systems, LiftOFF Technology, Lilac Solutions, Logical Buildings, LuxWall, Mangrove Lithium, Mantel, Manus Bio, Mars Materials, Matroid, Matter., Metafuels, Metro Africa Xpress, Mission Zero, Monta, Mythos AI, Natel Energy, NitroVolt, Nixtla, Novoloop, Nth Cycle, Nuventura, Our Next Energy, Oxford Flow, PVcase, Paces, Pioneer Transformers, Plantible Foods, Power Factors, Powernap Energy, Project Canary, Proterra, Qarbotech, Quantela, Queens Carbon, RIFT, Rally, RangeForce, Raptor Maps, RatedPower, Reactive Technologies, Remix, RenewCO2, Reverion, Rheaply, Rize, Rs Technologies, Rubicon, SHYFT Power Solutions, Salient Predictions, Sibros, Simpli, Sinkco Labs, Site2020, Sortera Alloys, Sourcemap, Spark e-Fuels, SparkCharge, Standard Potential, Stem, Stream Security, StudyTube, Supercircle, Swimlane, Symbium, TS Conductor, TWAICE, Takachar, The Eastern Specialty Company, ThinkLabs AI, TradeLanes, Traffic & Mobility Consultants, Transaera, Transcend, Trekker Group, Turntide Technologies, Type One Energy, Unemit, Urbint, UtilityAPI, Vantem Global, Vistech Manufacturing Solutions, Wattair, Zap Energy, mantle8, myenergi
+## No ATS found (151) - add to seeds.yaml with ats/slug if you care
+Advanced Agriscience, Aeroseal, Airloom Energy, Allume Energy, Ampaire, Anning Corporation, Arboresque, Arculus Solutions, ArkeaBio, Artyc, Assetcool, AtmosZero, Atomic Canyon, Atomic Data, Ayr Energy, Bidgely, Blue Planet Energy Systems, LLC, Blue World Technologies, Blyncsy, Boston Metal, Brightband, BurnBot, CERT Systems, Capture6, CarbonCure Technologies, CeresAI, ChargerHelp!, Chargetrip, Chement, Cyclic Materials, Dimensional Energy, Dragonfly Energy Corporation, ERock, Elum Energy, Enchanted Rock, Energy Dome, Ev.energy, Fast Radius, Forum Mobility, Full Harvest, Geli, Gencores, Geologicai, Greenly, Grid Status, GridBeyond, GridX, H2Pro, H2site, Handle, Hawaii'i 'Ulu Cooperative, HeatTransformers, Hephae Energy Technology, Hertha Metals, Holocene, Hometree, HyperHeat, Infravision, Innowatts, Instagrid, Ion Solar, Jupiter Intelligence, Kayrros, Kelvin, Kevala, Kodama Systems, LiftOFF Technology, Lilac Solutions, Logical Buildings, LuxWall, Mangrove Lithium, Mantel, Manus Bio, Mars Materials, Matroid, Matter., Metafuels, Metro Africa Xpress, Mission Zero, Monta, Mythos AI, Natel Energy, NitroVolt, Nixtla, Novoloop, Nth Cycle, Nuventura, Our Next Energy, Oxford Flow, PVcase, Paces, Pioneer Transformers, Plantible Foods, Power Factors, Powernap Energy, Project Canary, Proterra, Qarbotech, Quantela, Queens Carbon, RIFT, Rally, RangeForce, Raptor Maps, RatedPower, Reactive Technologies, Remix, RenewCO2, Reverion, Rheaply, Rize, Rs Technologies, Rubicon, SHYFT Power Solutions, Salient Predictions, Sibros, Simpli, Sinkco Labs, Site2020, Sortera Alloys, Sourcemap, Spark e-Fuels, SparkCharge, Standard Potential, Stem, Stream Security, StudyTube, Supercircle, Swimlane, Symbium, TS Conductor, TWAICE, Takachar, The Eastern Specialty Company, ThinkLabs AI, TradeLanes, Traffic & Mobility Consultants, Transaera, Transcend, Trekker Group, Turntide Technologies, Type One Energy, Unemit, Urbint, UtilityAPI, Vantem Global, Vistech Manufacturing Solutions, Wattair, Zap Energy, mantle8, myenergi
 
 ## Dropped dead boards (0)
 
