@@ -1367,16 +1367,6 @@
   "guessed": false
  },
  {
-  "ats": "greenhouse",
-  "slug": "overstory",
-  "name": "Overstory",
-  "sources": [
-   "Climate Draft (Lowercarbon + dozens of climate VCs)",
-   "Energy Impact Partners"
-  ],
-  "guessed": false
- },
- {
   "ats": "ashby",
   "slug": "overviewenergy",
   "name": "Overview Energy",
