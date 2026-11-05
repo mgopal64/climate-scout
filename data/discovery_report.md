@@ -1,14 +1,14 @@
-# Discovery report - 2026-11-04 18:06 UTC
+# Discovery report - 2026-11-05 18:07 UTC
 **234 pollable companies** (greenhouse: 86, ashby: 85, lever: 45, workable: 16, lever_eu: 1, smartrecruiters: 1)
 
 ## Getro boards
 | Board | Network | Jobs | Companies |
 |---|---|---|---|
-| Breakthrough Energy Ventures | 1533 | 1537 | 70 |
+| Breakthrough Energy Ventures | 1533 | 1535 | 70 |
 | Breakthrough Energy Fellows | 2567 | 105 | 29 |
-| Elemental Impact | 624 | 1188 | 63 |
+| Elemental Impact | 624 | 1212 | 63 |
 | Energy Impact Partners | 253 | 1390 | 71 |
-| Energize Capital | 1212 | 157 | 24 |
+| Energize Capital | 1212 | 159 | 24 |
 
 ## Companies contributed per source
 - Breakthrough Energy Fellows: 5
