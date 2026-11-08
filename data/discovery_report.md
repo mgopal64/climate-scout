@@ -1,13 +1,13 @@
-# Discovery report - 2026-11-07 16:31 UTC
-**234 pollable companies** (greenhouse: 86, ashby: 85, lever: 45, workable: 16, lever_eu: 1, smartrecruiters: 1)
+# Discovery report - 2026-11-08 16:44 UTC
+**235 pollable companies** (greenhouse: 86, ashby: 85, lever: 45, workable: 17, lever_eu: 1, smartrecruiters: 1)
 
 ## Getro boards
 | Board | Network | Jobs | Companies |
 |---|---|---|---|
-| Breakthrough Energy Ventures | 1533 | 1532 | 70 |
+| Breakthrough Energy Ventures | 1533 | 1531 | 70 |
 | Breakthrough Energy Fellows | 2567 | 105 | 28 |
-| Elemental Impact | 624 | 1220 | 63 |
-| Energy Impact Partners | 253 | 1385 | 71 |
+| Elemental Impact | 624 | 1204 | 63 |
+| Energy Impact Partners | 253 | 1386 | 72 |
 | Energize Capital | 1212 | 157 | 24 |
 
 ## Companies contributed per source
@@ -16,11 +16,11 @@
 - Climate Draft (Lowercarbon + dozens of climate VCs): 194
 - Elemental Impact: 26
 - Energize Capital: 12
-- Energy Impact Partners: 23
+- Energy Impact Partners: 24
 - seeds: 3
 
 ## Unsupported ATS links seen (covered by daily catch-all)
-{'workday': 182}
+{'workday': 183}
 
 ## Guessed slugs - sanity check these (0)
 

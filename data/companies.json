@@ -613,6 +613,15 @@
   "guessed": false
  },
  {
+  "ats": "workable",
+  "slug": "elementlpower",
+  "name": "Elementl Power",
+  "sources": [
+   "Energy Impact Partners"
+  ],
+  "guessed": false
+ },
+ {
   "ats": "ashby",
   "slug": "eli",
   "name": "Eli",
