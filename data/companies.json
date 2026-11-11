@@ -700,9 +700,11 @@
   "slug": "fervoenergy",
   "name": "Fervo Energy",
   "sources": [
-   "Climate Draft (Lowercarbon + dozens of climate VCs)"
+   "Climate Draft (Lowercarbon + dozens of climate VCs)",
+   "Breakthrough Energy Ventures",
+   "Elemental Impact"
   ],
-  "guessed": true
+  "guessed": false
  },
  {
   "ats": "greenhouse",
