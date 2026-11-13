@@ -517,6 +517,15 @@
   "guessed": false
  },
  {
+  "ats": "greenhouse",
+  "slug": "cyclicmaterialsinc",
+  "name": "Cyclic Materials",
+  "sources": [
+   "Energy Impact Partners"
+  ],
+  "guessed": false
+ },
+ {
   "ats": "ashby",
   "slug": "dandelion",
   "name": "Dandelion Energy",
