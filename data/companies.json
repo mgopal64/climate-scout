@@ -202,6 +202,15 @@
  },
  {
   "ats": "ashby",
+  "slug": "archive",
+  "name": "Archive",
+  "sources": [
+   "Energize Capital"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "ashby",
   "slug": "arcturus",
   "name": "Arcturus",
   "sources": [
