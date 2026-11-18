@@ -1787,6 +1787,15 @@
  },
  {
   "ats": "greenhouse",
+  "slug": "sinaitechnologiesinc",
+  "name": "SINAI Technologies",
+  "sources": [
+   "Energize Capital"
+  ],
+  "guessed": false
+ },
+ {
+  "ats": "greenhouse",
   "slug": "sirenopt",
   "name": "SirenOpt",
   "sources": [
