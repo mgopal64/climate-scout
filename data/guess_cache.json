@@ -1366,7 +1366,7 @@
 },
 "measurabl": {
 "result": null,
-"checked": "2026-11-06T17:34:09.407017+00:00"
+"checked": "2026-11-20T18:40:35.371325+00:00"
 },
 "naturesfynd": {
 "result": null,
@@ -1395,5 +1395,21 @@
 "solaranalytics": {
 "result": null,
 "checked": "2026-11-12T18:24:50.394120+00:00"
+},
+"chemfinitytechnologies": {
+"result": null,
+"checked": "2026-11-20T18:40:35.371325+00:00"
+},
+"hoofprintbiome": {
+"result": null,
+"checked": "2026-11-20T18:40:35.371325+00:00"
+},
+"macrocycle": {
+"result": null,
+"checked": "2026-11-20T18:40:35.371325+00:00"
+},
+"fleetrobotics": {
+"result": null,
+"checked": "2026-11-20T18:40:35.371325+00:00"
 }
 }
