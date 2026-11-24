@@ -1350,7 +1350,7 @@
 },
 "mantle8": {
 "result": null,
-"checked": "2026-11-10T17:55:31.777269+00:00"
+"checked": "2026-11-24T20:43:07.756065+00:00"
 },
 "capture6": {
 "result": null,
@@ -1415,5 +1415,17 @@
 "pagetechnologies": {
 "result": null,
 "checked": "2026-11-23T22:07:02.335046+00:00"
+},
+"magnetless": {
+"result": null,
+"checked": "2026-11-24T20:43:07.756065+00:00"
+},
+"mithrilminerals": {
+"result": null,
+"checked": "2026-11-24T20:43:07.756065+00:00"
+},
+"borealisfusion": {
+"result": null,
+"checked": "2026-11-24T20:43:07.756065+00:00"
 }
 }

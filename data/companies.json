@@ -1971,15 +1971,6 @@
   "guessed": false
  },
  {
-  "ats": "lever",
-  "slug": "SoloAVT",
-  "name": "Terraline",
-  "sources": [
-   "Climate Draft (Lowercarbon + dozens of climate VCs)"
-  ],
-  "guessed": false
- },
- {
   "ats": "greenhouse",
   "slug": "tetra",
   "name": "Tetra",
