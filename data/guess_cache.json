@@ -1151,7 +1151,7 @@
 },
 "hephaeenergytechnology": {
 "result": null,
-"checked": "2026-11-13T17:48:58.664992+00:00"
+"checked": "2026-11-27T19:32:01.814006+00:00"
 },
 "ceresai": {
 "result": null,
@@ -1187,7 +1187,7 @@
 },
 "assetcool": {
 "result": null,
-"checked": "2026-10-28T16:44:05.744090+00:00"
+"checked": "2026-11-27T19:32:01.814006+00:00"
 },
 "myenergi": {
 "result": null,
@@ -1358,7 +1358,7 @@
 },
 "esgbook": {
 "result": null,
-"checked": "2026-11-13T17:48:58.664992+00:00"
+"checked": "2026-11-27T19:32:01.814006+00:00"
 },
 "forummobility": {
 "result": null,
@@ -1427,5 +1427,9 @@
 "borealisfusion": {
 "result": null,
 "checked": "2026-11-24T20:43:07.756065+00:00"
+},
+"lastwallnetworksinc": {
+"result": null,
+"checked": "2026-11-27T19:32:01.814006+00:00"
 }
 }
